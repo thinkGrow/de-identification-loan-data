@@ -1,0 +1,16 @@
+data1 <- readRDS('loanData.rds')
+
+data1 <- sample_n(data1, 5000)
+
+deidenf_df <- data1 %>%
+  select(!c("last_name", "first_name"))
+
+new <- deidenf_df %>% 
+  mutate(age_group = cut(cus_age, breaks = 5)) %>% 
+  mutate(dep = cut(no_depend, breaks =3)) %>% 
+  mutate(new_income = income + rnorm(n(), 0, ))
+  select(!c(cus_age, no_depend))
+  
+table(new$no_depend)
+
+

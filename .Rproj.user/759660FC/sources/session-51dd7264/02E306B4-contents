@@ -1,0 +1,106 @@
+---
+title: "Marking Rubric Assignment 3"
+editor: visual
+embed-resources: true
+---
+
+## Task 1 (45 marks)
+
+i.  (5 marks) Before diving in to the data, what steps do you need to consider or check given the scenario. Use the [data science ethics checklist](https://deon.drivendata.org/#default-checklist) to help you respond.
+
+* *1 Mark: Did not use the ethics checklist appropriately. Response shows minimal awareness of ethical considerations in data science.*
+
+* *2 Marks: Limited application of the ethics checklist. Response identifies only basic ethical considerations with little depth.*
+
+* *3 Marks: Adequate use of the ethics checklist. Response addresses some key ethical considerations but lacks comprehensive analysis.*
+
+* *4 Marks: Good application of the ethics checklist and appropriate filtering to the relevant parts. Response demonstrates thoughtful consideration of multiple ethical dimensions.*
+
+* *5 Marks: Excellent application of the checklist, with only the relevant and important the aspects considered. Response shows comprehensive understanding of multiple ethical dimensions.*
+
+ii. (10 marks) Review the data provided, and for each variable or group of variables identify any that could pose an identification risk and explain why.
+
+* *1-2 Marks: Student has failed to identify most obvious identification risks. Response shows minimal understanding of what constitutes identifiable information. Little to no explanation of why variables pose risks. May have incorrectly classified non-risky variables as risks or completely missed critical identifiers.*
+
+* *3-4 Marks Student has correctly found some basic direct identifiers but missed several important indirect identifiers. Explanations are present but superficial. Limited understanding of how variables can combine to create identification risks. Minimal consideration of context-specific risks.*
+
+* *5-6 Marks Student has identified most direct identifiers and some indirect identifiers. Explanations show adequate understanding of why these variables pose risks. Some consideration of how variables might combine to increase identification risk. Reasonable but not comprehensive analysis of the data set's identification risks.*
+
+* *7-8 Marks Student has thoroughly identified direct and most indirect identifiers. Good explanations of why variables pose risks with specific examples. Clear understanding of how combinations of variables increase identification risk. Demonstrates understanding of how context affects identification risk.*
+
+* *9-10 Marks Student has comprehensively identified direct and indirect identifiers with excellent explanations. Explanations demonstrate how seemingly innocuous variables can become identifying when combined with other information. Response considers dataset-specific contexts and unique risk factors.*
+
+iii. (20 marks) Based on your above responses, implement a de-identification strategy so that customers are unable to identify themselves in the data. Ensure customers cannot be identified from their demographics or loan performance characteristics. Explain your steps and any choices you make clearly.
+
+*Marks will be awarded for technical implementation (10 marks)*
+
+- Code quality, correctness, and efficiency
+- Appropriate selection of de-identification techniques for different variable types
+- Appropriate handling of both direct and quasi-identifiers
+- Error handling and edge case management
+- Appropriate balance struck between preservation of data utility while protecting privacy
+
+*Marks will be awarded for successful de-identification and mitigation of risk (5 marks)*
+
+- Potential identifiers both direct and indirect successfully removed
+- Care given to appropriately address rare combinations and outliers
+- Approach considers risk from external data sources that could aid re-identification
+- Verification of effectiveness through attempted re-identification tests
+
+*Methodology and Explanation (5 marks)*
+
+- Clear explanation of the strategy's overall approach
+- Justification for each technique appropriate 
+- Justification for any choices or assumptions
+- Documentation of the entire process clear 
+- Clarity and thoroughness of explanations
+
+iv. After finalising your de-identification strategy, what steps do you need to consider or check before you share your processed data. Use the [data science ethics checklist](https://deon.drivendata.org/#default-checklist) to help you respond.
+
+*Same as the marking scheme for part i*
+
+v.  (5 marks) Discuss how your de-identification has changed the utility of the data. 
+
+* *1 Mark: Minimal discussion of utility changes. Fails to address how de-identification affects the usability of the data.*
+
+* *2 Marks: Limited discussion of utility effects. Brief mention of changes to data structure without meaningful examples.*
+
+* *3 Marks: Adequate discussion of how utility has changed. Identifies major impacts with some specific examples of affected variables or analyses.*
+
+* *4 Marks: Thorough discussion with concrete examples. Addresses multiple ways utility has been affected across different variable types and analytical purposes.*
+
+* *5 Marks: Comprehensive discussion with clear examples. Thoughtfully explains utility changes, specific trade-offs made, and implications for the intended use of the data.*
+
+## Task 2 (15 marks)
+
+vi. (10 marks) Create a data dictionary to accompany your data set.
+
+* *1-2 Marks: Minimal or incomplete data dictionary. Missing multiple required elements.*
+
+* *3-4 Marks: Basic data dictionary that covers some required elements but has significant gaps. Limited information on variable specifics.*
+
+* *5-6 Marks: Adequate data dictionary containing most required elements. Includes variable names and types but lack some important details.*
+
+* *7-8 Marks: Thorough data dictionary with all required elements clearly presented. Good explanation of variable names, types, storage formats, derivations, units, etc.*
+
+* *9-10 Marks: Comprehensive and well-structured data dictionary exceeding requirements. Excellent documentation of all variables with clear explanations of derivations, units, factorial levels, etc. Includes additional helpful context that aids data interpretation.*
+
+vii. (5 marks) Create a readme file to accompany your data. 
+
+* *1 Mark: Minimal README lacking most required elements. Insufficient for data users to understand content or appropriate use.*
+
+* *2 Marks: Basic README with dataset overview but missing key information on methodology, limitations, or usage guidance.*
+
+* *3 Marks: Adequate README covering data set purpose, collection methods, and basic usage instructions. Some limitations addressed.*
+
+* *4 Marks: Thorough README with clear data set description, de-identification information, appropriate usage, and limitations.*
+
+* *5 Marks: Excellent README with comprehensive documentation. Well-structured with all essential elements plus additional helpful context.*
+
+## Submission
+
+Marks will be deducted as per the assignment 1 marking scheme if the submission instructions assumed as standard are not followed.
+
+## Data
+
+An automatic 5% penalty will apply if students do not follow the instructions to generate their own personal data set for this assignment.

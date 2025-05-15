@@ -1,0 +1,99 @@
+---
+title: "Assignment 3"
+format: html
+embed-resources: true
+editor: visual
+---
+
+## Scenario
+
+Assume that you are working as a data ethics officer at a US banking institution. The bank has decided to share their loan performance data with the public. This will help improve customer  understanding of mortgage loan performance and credit risk. 
+
+Alongside the loan and transaction information, the data contains personal information. This includes information about the customer and some other demographic variables.
+
+## Your Task:
+
+You will ensure that the data is de-identified. You will process the data to comply with the privacy and data protection laws and regulations before the data is approved for publication as open data.
+
+#### You will need to:
+
+-   create a justified strategy to de-identify data ready for release as open data,
+
+-   create a data dictionary and a README to share alongside your data to help facilitate its use
+
+-   ensure individual customers cannot identify themselves in this data
+
+#### Note:
+
+This data is from Fannie Mae data set, but with additional **fake** personal details added. The data is therefore for teaching purposes and is not intended for real analysis or interpretation.
+
+#### Helpful hints:
+
+-   Assume that your data set is the full population data.
+-   The final decision on which variables to include or exclude is up to your judgement.
+-   Missingness is stored in the usual R way as an `NA`.
+-   If you have questions about the data come long to consult or use the discussion forums.
+-   The metadata for the data set is given.
+
+## Your data
+
+Each student will have their own data set for this assignment. In the assignment template, in the `R` folder, you will find the following file `run_this_script_to_get_your_data_set.R`. Change the code and add your student number, then run this code.
+
+This code will take the raw data, `loanData.rds`, and create a unique data set for you to use on your assignment. The markers can reproduce this same data set using your student number. 
+
+## Task 1: Privacy Risk (45 marks)
+
+i.  (5 marks) Before diving in to the data, what steps do you need to consider or check given the scenario. Use the [data science ethics checklist](https://deon.drivendata.org/#default-checklist) to help you respond.
+
+ii. (10 marks) Review the data provided, and for each variable or group of variables identify any that could pose an identification risk and explain why.
+
+iii. (20 marks) Based on your above responses, implement a de-identification strategy so that customers are unable to identify themselves in the data. Ensure customers cannot be identified from their demographics or loan performance characteristics. Explain your steps and any choices you make clearly. Save your data as a `.rds` file to the data folder.
+
+iv. (5 marks) After finalising your de-identification strategy, what steps do you need to consider or check before you share your processed data. Use the [data science ethics checklist](https://deon.drivendata.org/#default-checklist) to help you respond.
+
+v.  (5 marks) Discuss how your de-identification has changed the utility of the data. 
+
+## Task 2: Preparing your data for production (15 marks)
+
+vi. (10 marks) Create a data dictionary to accompany your data set. This should include at a minimum:
+
+-   Details of all variables released with the data
+-   The variable name in the released data
+-   Variable type and details on how it is stored
+-   Any relevant item specific information
+    -   If it's derived, how it was derived
+    -   The units
+    -   Factorial levels for factorial variables
+    -   Details of how missing values are coded
+
+An empty `.csv` template is provided for you to use. Ensure your data dictionary is neat and clear.
+
+vii. (5 marks) Create a readme file to accompany your data. This should include at a minimum:
+
+-   A description of the data's origin
+-   A description of the files included with the data
+-   Author and the date of release
+-   Description on how to use the data
+-   Any relevant assumptions (if there are any)
+
+An empty `.txt` template is provided for you to use. 
+
+## Submission
+
+-   Answer the questions and submit your report about the data using the Quarto template provided. We *do not* use word documents in this unit as we want our work to be fully reproducible.
+
+-   Submit your final processed data set and the code needed to reproduce your analysis.
+
+-   As the original data set is large, you can **delete the data from the raw data folder upon upload** to reduce size. You can also delete your personalised data set prior to pre-processing. Please also remove hidden files and clear your .Rdata.
+
+-   Ensure your code will run, and that your report will build on another computer (your markers!). This is important so we can reproduce your report. Use an R Project and do not submit direct file paths!
+
+-   Ensure your code is neat and tidy.
+
+-   Ensure your writing is clear and concise.
+
+-   Include an AI acknowledgement and include links to all queries. Be sure to use your own critical thinking, and use AI as a tool. As we have now discussed AI directly in a drop in session **no further warnings will be given about inappropriate AI use**.
+
+-   Include all relevant citations and be sure to cite all R packages used. The function `?citation()` will be helpful here.
+
+*The above is assumed as standard. Marks will be deducted if the above standards are not met as per the marking scheme from assignment 1 with possible additional penalties for inappropriate use of AI.*

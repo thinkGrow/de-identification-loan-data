@@ -1,0 +1,23 @@
+---
+title: "ETC5512: Assignment 3"
+author: "ADD YOUR NAME HERE" 
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+```
+
+### Task 1
+
+Put you Task 1 answers here
+
+*You answer to task 2 should be in self contained files.*
+
+### Citations
+
+Add you citations here
+
+### AI acknowledgment
+
+Share you AI acknowledgement and queries here

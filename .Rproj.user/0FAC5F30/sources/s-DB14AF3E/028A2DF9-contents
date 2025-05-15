@@ -1,0 +1,28 @@
+### Required packages
+list.of.packages <- c("MASS", "data.table", "tidyverse", "here", "stringr",
+                      "lubridate", "randomNames")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+#Loading Packages
+invisible(lapply(list.of.packages, require, character.only = TRUE))
+
+data <- readRDS("2017_2019Data.rds")
+
+dim(data)
+
+data$LastName = randomNames(nrow(data), which.names ="last")
+
+data$FirstName = randomNames(nrow(data), which.names="first")
+
+data$Income = sample(20000:1000000, size= nrow(data), replace=TRUE)
+
+data$CusAge = sample(x=30:45, size = nrow(data), replace=TRUE)
+
+data$NoDepend = sample(0:6, prob=c(0.2, 0.2, 0.4, 0.1, 0.05, 0.025, 0.025), size=nrow(data), replace=TRUE)
+
+final <- sample_n(data, 20000)
+
+saveRDS(data, "raw_data/loanData.rds")
+
+

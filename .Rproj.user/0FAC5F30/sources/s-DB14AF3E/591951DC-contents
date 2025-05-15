@@ -1,0 +1,91 @@
+### Required packages
+list.of.packages <- c("MASS", "data.table", "tidyverse", "here", "stringr",
+                      "lubridate", "randomNames")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+#Loading Packages
+invisible(lapply(list.of.packages, require, character.only = TRUE))
+
+data <- readRDS("2017_2019Data.rds")
+
+dim(data)
+
+data <- data %>%
+  rename_all(tolower) %>%
+  select("loan_id",
+         "orig_chn",
+         "seller",
+         "loan_age",
+         "orig_rt",
+         "orig_amt",
+         "orig_trm",
+         "oltv",
+         "ocltv",
+         "num_bo",
+         "dti",
+         "cscore_b",
+         "fthb_flg",
+         "purpose",
+         "prop_typ",
+         "num_unit",
+         "occ_stat",
+         "state",
+         "zip_3",
+         "mi_pct",
+         "cscore_c",
+         "aqsn_dte",
+         "orig_dte",
+         "frst_dte",
+         "last_rt",
+         "last_upb",
+         "msa",
+         "fcc_cost",
+         "pp_cost",
+         "ar_cost",
+         "ie_cost",
+         "tax_cost",
+         "ns_procs",
+         "ce_procs",
+         "rmw_procs",
+         "o_procs",
+         "repch_flag",
+         "last_activity_date",
+         "lpi_dte",
+         "fcc_dte",
+         "disp_dte",
+         "servicer",
+         "f30_dte",
+         "f60_dte",
+         "f90_dte",
+         "f120_dte",
+         "f180_dte",
+         "fce_dte",
+         "f180_upb",
+         "fce_upb",
+         "f30_upb",
+         "f60_upb",
+         "f90_upb",
+         "mod_flag",
+         "fmod_dte",
+         "fmod_upb",
+         "pfg_cost",
+         "net_loss",
+         "net_sev",
+         "modtot_cost"
+  )
+
+data$last_name = randomNames(nrow(data), which.names ="last")
+
+data$first_name = randomNames(nrow(data), which.names="first")
+
+data$income = sample(20000:1000000, size= nrow(data), replace=TRUE)
+
+data$cus_age = sample(x=30:45, size = nrow(data), replace=TRUE)
+
+data$no_depend = sample(0:6, prob=c(0.2, 0.3, 0.4, 0.05, 0.01, 0.006, 0.004), size=nrow(data), replace=TRUE)
+
+final <- sample_n(data, 9999)
+
+saveRDS(data, "loanData.rds")
+
